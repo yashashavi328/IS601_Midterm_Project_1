@@ -8,7 +8,21 @@ INPUT_DATA = None
 
 # custom functions
 def track_customers(data):
-    pass
+    # initialize customers dictionary
+    customers_dict = dict()
+
+    # store customer details in dictionary
+    for order in data:
+        customers_dict[order["phone"]] = order["name"]
+
+    # creating output file in respective folder
+    os.chdir('../output')
+    output_directory = os.getcwd()
+    customers_json_path = os.path.join(output_directory, "customers.json")
+
+    # write customer details to output file
+    with open(customers_json_path, 'w') as customer_json:
+        json.dump(customers_dict, customer_json, indent=4)
 
 def track_items():
     global INPUT_DATA
@@ -27,7 +41,7 @@ def main():
     track_customers(INPUT_DATA)      # with passing data reference 
 
     # create items.json
-    track_items()                # without passing data reference 
+    # track_items()                # without passing data reference 
 
 if __name__=="__main__":
     main()
