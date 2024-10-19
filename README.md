@@ -1,4 +1,4 @@
-# IS601_Midterm_Project_1 | Restaurant order management
+## Restaurant order management
 This is a CLI (Command Line) project which performs operations to filter out data from an input file given in a terminal argument and store them in formatted manner to json files.
 
 ## Table of Contents
@@ -35,7 +35,7 @@ Follow these steps to install and set up the project:
    # activate environment on windows
    .\<environment_name>\Scripts\activate
 
-   @ activate environment on macOs
+   # activate environment on macOs
    source <environment_name>/bin/activate
 
 4. Install required packages
